@@ -1,0 +1,22 @@
+type Query {
+  users: [User]
+  user(id: ID!): User
+}
+
+type Mutation {
+  addNewUser(name: String!, age: Int!, email: String!): User
+  addNewPostByUserId(userId: ID!, content: String!, date: String!): Post
+}
+
+type User {
+  id: ID!
+  name: String!
+  age: Int!
+  email: String!
+  posts:[Post]
+}
+
+type Post {
+  content: String!
+  date: String!
+}
