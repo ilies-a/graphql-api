@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "watch": "nodemon run src/server.js",
+    "cluster": "pm2 start src/server.js -i max",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +17,8 @@
     "@graphql-tools/schema": "^9.0.10",
     "apollo-server-express": "^3.11.1",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pm2": "^5.2.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
